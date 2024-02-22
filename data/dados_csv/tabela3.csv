@@ -1,0 +1,4 @@
+COUNTA de Status de Entrega,,Status de Entrega,,,
+Produto,Código,ENTREGUE (ANTES DO PRAZO DE INICIAR A ATIVIDADE),ENTREGUE (COM ATRASO),ENTREGUE (NO PRAZO),NÃO ENTREGUE (ATIVIDADE EM ATRASO)
+Produto 01 Total,,"11,54%","30,77%","23,08%","34,62%"
+Total geral,,"11,54%","30,77%","23,08%","34,62%"
