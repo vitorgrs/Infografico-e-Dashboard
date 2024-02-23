@@ -19,5 +19,5 @@ function criarGrafico7(){
 }
 
 if (document.getElementById("divGrafico7")) {
-    criarGrafico7();
+    /*criarGrafico7();*/
 }

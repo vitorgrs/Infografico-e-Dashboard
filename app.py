@@ -28,11 +28,11 @@ def executar_codigo():
             resultado = subprocess.check_output(['python', '-c', 'from modules.extrator import opcao3; print(opcao3())'])
             return resultado
         else:
-            return jsonify({"error": "Opcao invalida"}), 400  # Retornando um JSON com erro e status code 400 para opções inválidas
+            return jsonify({"error": "Opcao invalida"}), 400  
             
     except Exception as e:
         app.logger.error(f"Erro ao executar o código: {str(e)}")
-        return jsonify({"error": str(e)}), 500  # Retornando um JSON com o erro e status code 500 em caso de exceção
+        return jsonify({"error": str(e)}), 500  
 
 if __name__ == '__main__':
    app.run(debug=True, port=5002)

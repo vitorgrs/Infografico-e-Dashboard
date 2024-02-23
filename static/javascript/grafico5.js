@@ -75,12 +75,23 @@ function criarConteinerGrafico5(datagrafico5) {
     containerGrafico5.classList.add('containerGrafico5');
     document.getElementById('divGrafico5').appendChild(containerGrafico5);
 
+    var divmMaiorGrafico5 = document.createElement('div');
+    divmMaiorGrafico5.classList.add('divmMaiorGrafico5');
+
     var imagemgrafico5 = document.createElement('img');
     imagemgrafico5.src = '../static/images/perfilmaiortaxa.svg';  
     imagemgrafico5.alt = 'imagem'; 
     imagemgrafico5.classList.add('imagemgrafico5')
 
-    containerGrafico5.appendChild(imagemgrafico5);
+    var tituloGrafico5 = document.createElement('p');
+    tituloGrafico5.classList.add('tituloGrafico5');
+    tituloGrafico5.textContent = 'Perfil Mais Eficiente';
+
+    
+
+    divmMaiorGrafico5.appendChild(imagemgrafico5)
+    divmMaiorGrafico5.appendChild(tituloGrafico5)
+    containerGrafico5.appendChild(divmMaiorGrafico5);
 
     var divDescricaoGrafico5 = document.createElement('p');
     divDescricaoGrafico5.classList.add('divDescricaoGrafico5');

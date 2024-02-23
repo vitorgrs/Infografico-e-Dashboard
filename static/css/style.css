@@ -141,10 +141,11 @@
 iframe {
     width: 100%;
     height: 100%;
-    border: 0; /* Remova a borda do iframe, se necessário */
+    border: 0; 
 }
+
 main{
-    background-color: var(--purple-primary);
+    background-color: var(--blue-secundary);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,23 +154,32 @@ main{
     box-sizing: border-box;
 
 }
-.Conteudo{
+.dashboard{
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 100vh; 
 }
-
-.containerDaEsquerda, .containerDaDireita, .containerDoMeio{
+.infografico{
     display: flex;
-    flex-direction: column;
-    padding: 10px;
+    flex-direction: row;
+    justify-content: center; 
+    width: 100%;
+    height: 84vh; 
 }
 
+
+
+.containerDaEsquerda,
+.containerDoMeio,
+.containerDaDireita {
+    padding: 10px;
+    flex: 1; /* Distribui o espaço igualmente entre as divs principais */
+    text-align: center; /* Centraliza o conteúdo dentro de cada div principal */
+}
 .Filtro{
     background-color: var(--blue-primary);
     min-width: 20rem;
-    max-width: 30rem;
     max-height: 10rem;
     color: white;
     border-radius: 40px;
@@ -194,327 +204,6 @@ main{
 }
 
 
-
-
-.divGrafico1{
-    background-color: var(--blue-primary);
-    border-radius: 40px;
-    padding: 20px;
-    min-width: 15rem;
-    max-width: 30rem;
-    margin-top: 30px
-
-}
-
-.containerGrafico1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.divContainerGrafico1{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.nomeDivGrafico1{
-    color: white;
-    text-align: center;
-    margin-bottom: 10px;
-    font-weight: 600;
-    font-size:20px;
-
-}
-
-.Grafico1 {
-    max-width: 10rem;
-    max-height: 10rem;
-    margin-right: 20px;
-}
-
-.divPercentual{
-    color:white;
-    display:flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.percentualDeConclusao{
-    font-size: 3em;
-    font-weight: 700;
-    color: #0EB000;
-}
-.percentualDeNaoConclusao{
-    font-size: 3em;
-    font-weight: 700;
-    color:#D00000;
-}
-
-/*Grafico 2*/
-
-
-.divGrafico2{
-    background-color: var(--blue-primary);
-    display: flex;
-    flex-direction: column;
-    min-height: 50rem;
-    min-width:15rem;
-    max-width:30rem;
-    text-align: center;
-    box-sizing: border-box;
-    border-radius: 40px;
-    padding: 20px;
-    
-}
-
-.containerGrafico2{
-    display: flex;
-    flex-direction: column;
-    object-fit: contain;
-    box-sizing: border-box;
-}
-
-.divNomePerfilGrafico2{
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    text-align: center;
-}
-
-
-.imagemPerfil {
-    position: absolute;
-    min-width: 8rem;
-    z-index: 999;
-    right: 40px;
-    left: 0;
-    top:0;
-    bottom: 2px;
-}
-
-
-.nomeDoPerfilGrafico2{
-    position: absolute;
-    top:20px;
-    left: 80px;
-    color: var(--white);
-    border: 1px solid white;
-    border-radius: 20px;
-    min-width: 11rem;
-    max-width: 25rem;
-    width: 70%;
-    min-height: 1rem;
-    max-height: 3rem;
-    word-wrap: break-word;
-    border-color: white;
-    margin-right: 20px;
-    box-sizing: border-box;
-    padding: 3px;
-}
-
-
-.divContainerGrafico2{
-    color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    
-}
-.Grafico2{
-    margin-top: 60px;
-    max-width: 8rem;
-    max-height: 8rem;
-    margin-right: 10px;
-
-}
-.divDescricaoGrafico2{
-    margin-top: 120px;
-    text-align: center;
-}
-
-
-
-
-/*Grafico 3*/
-
-
-.containerGrafico3{
-    margin-top: 30px;
-    background-color: var(--blue-primary);
-    min-width:20rem;
-    max-width: 30rem;
-
-
-    padding: 20px;
-    border-radius: 40px;
-    justify-content: space-between;
-}
-.nomeDivGrafico3{
-    color: white;
-    text-align: center;
-    margin-bottom: 10px;
-    font-weight: 600;
-    font-size:20px;
-}
-
-.Grafico3{
-    max-width: 10rem;
-    max-height: 10rem;
-    margin-right: 2ch;
-
-}
-.divContainerGrafico3{
-    color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-    
-}
-
-.divPorcentageGrafico3{
-    color:red;
-    font-size: 2.5em;
-    font-weight: 800;
-    
-}
-.maiorStatusDeEntrega{
-    font-size:1em;
-    color:red;
-    font-weight: 600;
-}
-
-/*Grafico 4*/
-
-.containerGrafico4{
-    margin-top: 30px;
-    background-color: var(--blue-primary);
-    min-width:20rem;
-    max-width: 30rem;
-    padding: 20px;
-    border-radius: 40px;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    align-items: center;
-   
-  
-
-}
-.imagemgrafico4{
-    min-width: 5rem;
-}
-.divDescricaoGrafico4{
-    margin-top: 20px;
-    text-align: center;
-}
-.divDescricaodetalhadaGrafico4{
-    margin-top: 10px;
-    text-align: center;
-}
-
-/*Grafico 5*/
-
-
-.containerGrafico5{
-    margin-top: 30px;
-    background-color: var(--blue-primary);
-    min-width:15rem;
-    max-width: 30rem;
-    padding: 20px;
-    border-radius: 40px;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    align-items: center;
-   
-}
-.imagemgrafico5{
-    min-width: 5rem;
-}
-.divDescricaoGrafico5{
-    margin-top: 20px;
-    text-align: center;
-}
-.nomeDoPerfilGrafico5{
-    font-size: 20px;
-    font-weight: 700;
-
-}
-.divDescricaodetalhadaGrafico5{
-    margin-top: 10px;
-    text-align: center;
-}
-
-
-/*Grafico 6*/
-
-.containerGrafico6{
-    background-color: var(--blue-primary);
-    min-width:20rem;
-    max-width:30rem;
-    padding: 20px;
-    border-radius: 40px;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    align-items: center;
-}
-.tituloGrafico6{
-    text-align: center;
-    font-size: 20px;
-    font-weight: 800;
-}
-.imagemgrafico6{
-    min-width: 5rem;
-}
-.containerMenorGrafico6{
-    display: flex;
-    flex-direction: row;
-}
-
-.divQuantidadeAtividades, .divQuantidadeAtividadesEntreges{
-    display: flex;
-    flex-direction: row;
-   
-}
-
-.divDescricaoGrafico6, .divDescricaodetalhadaGrafico6{
-   padding: 10px;
-   min-width: 80%;
-}
-
-.quantidadeAtividades, .quantidadeAtividadesEntreges{
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-    width: 2em;
-    height: 1.5em;
-    font-size: 30px;
-    font-weight: 700;
-    background-color: #144C75;
-}
-
-
-
-
-
-.containerGrafico7{
-    margin-top: 30px;
-    background-color: var(--blue-primary);
-    min-width:20rem;
-    max-width: 30rem;
-    padding: 20px;
-    border-radius: 40px;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    align-items: center;
-}
-.imagemgrafico7{
-    min-width: 5rem;
-}
 
 
 @media screen and (max-width: 940px) {
