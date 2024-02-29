@@ -1,0 +1,20 @@
+.carousel {
+    width: 400px; /* Ajuste conforme necessário */
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    color: whit;
+}
+
+.carousel p{
+    color: white;
+}
+  
+.carousel-item {
+    display: none;
+}
+  
+  .carousel-item.active {
+    display: block;
+  }
+  
