@@ -1,0 +1,25 @@
+.carousel {
+    width: 400px; /* Ajuste conforme necessário */
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel p{
+    color: white;
+}
+  
+.carousel-item {
+    display: none;
+}
+  
+  .carousel-item.active {
+    display: block;
+  }
+  
+.custom-icon-button{
+    background-color: (var(--blue-secundary));
+}
+.img-icon-button{
+    width: 3rem;
+}
