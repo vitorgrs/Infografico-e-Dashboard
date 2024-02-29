@@ -3,7 +3,6 @@
     margin: 0 auto;
     overflow: hidden;
     position: relative;
-    color: whit;
 }
 
 .carousel p{
@@ -18,3 +17,9 @@
     display: block;
   }
   
+.custom-icon-button{
+    background-color: (var(--blue-secundary));
+}
+.img-icon-button{
+    width: 3rem;
+}
