@@ -13,9 +13,8 @@ function carregarDadosEExibirGraficos() {
 
 function  criarGrafico4(){
 
-    var containerGrafico4 = document.createElement('div');
+    var containerGrafico4 = document.getElementById('divGrafico4')
     containerGrafico4.classList.add('containerGrafico4');
-    document.getElementById('divGrafico4').appendChild(containerGrafico4);
 
     var divmMaiorGrafico4 = document.createElement('div');
     divmMaiorGrafico4.classList.add('divmMaiorGrafico4');

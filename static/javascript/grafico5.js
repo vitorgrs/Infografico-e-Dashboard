@@ -71,9 +71,8 @@ function criarConteinerGrafico5(datagrafico5) {
   
   
 
-    var containerGrafico5 = document.createElement('div');
+    var containerGrafico5 =   document.getElementById('divGrafico5')
     containerGrafico5.classList.add('containerGrafico5');
-    document.getElementById('divGrafico5').appendChild(containerGrafico5);
 
     var divmMaiorGrafico5 = document.createElement('div');
     divmMaiorGrafico5.classList.add('divmMaiorGrafico5');

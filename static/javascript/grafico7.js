@@ -1,7 +1,7 @@
 function criarGrafico7(){
-    var containerGrafico7 = document.createElement('div');
+    var containerGrafico7 =   document.getElementById('divGrafico7')
     containerGrafico7.classList.add('containerGrafico7');
-    document.getElementById('divGrafico7').appendChild(containerGrafico7);
+
 
     var imagemgrafico7 = document.createElement('img');
     imagemgrafico7.src = '../static/images/perfilmaiortaxa.svg';  

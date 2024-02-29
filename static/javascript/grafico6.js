@@ -60,9 +60,9 @@ function criarGrafico6(totalAtividades, atividadesEntregues){
     tituloGrafico6.textContent = 'Conclusão atividades do produto - Valores Absolutos';
     
 
-    var containerGrafico6 = document.createElement('div');
+    var containerGrafico6 =     document.getElementById('divGrafico6')
     containerGrafico6.classList.add('containerGrafico6');
-    document.getElementById('divGrafico6').appendChild(containerGrafico6);
+
 
     var imagemgrafico6 = document.createElement('img');
     imagemgrafico6.src = '../static/images/quantidadedeatividade.svg';  

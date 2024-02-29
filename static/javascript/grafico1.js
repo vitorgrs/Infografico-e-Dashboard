@@ -39,9 +39,8 @@ function processarDadosCSV(Datatabela1) {
 
 
 function criarGrafico1(percentualConclusao, percentualNaoConclusao) {
-    var containerGrafico1= document.createElement('div');
+    var containerGrafico1= document.getElementById('divGrafico1');
     containerGrafico1.classList.add('containerGrafico1');
-    document.getElementById('divGrafico1').appendChild(containerGrafico1);
 
     var nomeDivGrafico1 = document.createElement('p');
     nomeDivGrafico1.classList.add('nomeDivGrafico1');
@@ -89,8 +88,8 @@ function criarGrafico1(percentualConclusao, percentualNaoConclusao) {
             datasets: [{
                 data: [percentualConclusao, percentualNaoConclusao],
                 backgroundColor: [
-                    '#0EB000',
-                    '#D00000',
+                    '#2FF057',
+                    '#E7110F',
                 ],
             }],
         },

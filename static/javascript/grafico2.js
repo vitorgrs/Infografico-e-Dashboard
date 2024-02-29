@@ -1,11 +1,16 @@
 function carregarDadosEExibirGraficos() {
     var caminhoCSV = '../data/dados_csv/tabela2.csv';
     carregarDadosCSV(caminhoCSV, function(dados) {
-  
+        var containerGrafico = document.getElementById('divGrafico2');
+        var tituloGrafico2 = document.createElement('p');
+        tituloGrafico2.classList.add('tituloGrafico2');
+        tituloGrafico2.textContent = 'Análise de Entrega por Perfil';
+        containerGrafico.appendChild(tituloGrafico2)
         Object.keys(dados).forEach(function(perfil) {
 
             if (perfil.trim() !== '') { 
                 
+
                 criarConteinerEExibirGrafico(perfil, dados[perfil]);
             }
         });
@@ -27,6 +32,7 @@ function verificarMaiorPorcentagem(nomePerfil ,perfilDados) {
     }
     
     return { porcentagem: maiorPorcentagem, status: status };
+
 }
 
 function criarConteinerEExibirGrafico(perfil, dados) {
@@ -41,6 +47,7 @@ function criarConteinerEExibirGrafico(perfil, dados) {
     containerGrafico2.id = containerGrafico2Id;
     document.getElementById('divGrafico2').appendChild(containerGrafico2);
 
+    
 
     var divNomePerfilGrafico2 =document.createElement('div');
     divNomePerfilGrafico2.classList.add('divNomePerfilGrafico2');
@@ -75,6 +82,7 @@ function criarConteinerEExibirGrafico(perfil, dados) {
     
     divContainerGrafico2.appendChild(divDescricaoGrafico2);
     divContainerGrafico2.appendChild(canvasGrafico2);
+    
     containerGrafico2.appendChild(divNomePerfilGrafico2);
     containerGrafico2.appendChild(divContainerGrafico2);
 
@@ -86,12 +94,11 @@ function criarConteinerEExibirGrafico(perfil, dados) {
             datasets: [{
                 data: Object.values(dados),
                 backgroundColor: [
-                    'rgba(75, 192, 192, 0.7)',
-                    'rgba(255, 99, 132, 0.7)',
-                    'rgba(255, 205, 86, 0.7)',
-                    'rgba(54, 162, 235, 0.7)',
-                    'rgba(255, 159, 64, 0.7)',
-                    'rgba(153, 102, 255, 0.7)',
+                    '#FAFE3F',
+                    '#2FF057',
+                    '#124A73',
+                    '#E7110F',
+                    '#A810A2',
                 ],
             }],
         },

@@ -37,9 +37,8 @@ function processarDados(Datatabela3) {
 
 function criarGrafico3(data,maiorStatusDeEntrega) {
 
-    var containerGrafico3 = document.createElement('div');
+    var containerGrafico3 =    document.getElementById('divGrafico3')
     containerGrafico3.classList.add('containerGrafico3');
-    document.getElementById('divGrafico3').appendChild(containerGrafico3);
 
     var nomeDivGrafico3 = document.createElement('p');
     nomeDivGrafico3.classList.add('nomeDivGrafico3');
@@ -86,12 +85,11 @@ function criarGrafico3(data,maiorStatusDeEntrega) {
             datasets: [{
                 data: Object.values(data),
                 backgroundColor: [
-                    'rgba(75, 192, 192, 0.7)',
-                    'rgba(255, 99, 132, 0.7)',
-                    'rgba(255, 205, 86, 0.7)',
-                    'rgba(54, 162, 235, 0.7)',
-                    'rgba(255, 159, 64, 0.7)',
-                    'rgba(153, 102, 255, 0.7)',
+                    '#FAFE3F',
+                    '#2FF057',
+                    '#124A73',
+                    '#E7110F',
+                    '#A810A2',
                 ],
             }],
         },

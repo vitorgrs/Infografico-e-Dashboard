@@ -56,7 +56,7 @@ function criarFiltro() {
     function enviarRequisicaoPython(selectedValue) {
         $.ajax({
             type: 'GET',
-            url: 'https://69.49.241.44:5002/executar', 
+            url: 'http://127.0.0.1:5002/executar', 
             data: {'selectedValue': selectedValue},
             success: function(response) {
                 console.log("Requisição bem-sucedida:", response);
