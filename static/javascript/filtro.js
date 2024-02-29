@@ -52,7 +52,7 @@ function criarFiltro() {
     window.onbeforeunload = function() {
         localStorage.setItem('selectedProduct', selectBox.value);
     };
-
+    
     function enviarRequisicaoPython(selectedValue) {
         $.ajax({
             type: 'GET',
