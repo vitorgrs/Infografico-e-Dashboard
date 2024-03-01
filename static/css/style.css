@@ -6,9 +6,6 @@
 }
 
 
-.main-infografico {
-    height: 92vh;
-}
 /*HEADER*/
 .header {
     display: flex;
@@ -143,9 +140,8 @@
 
 iframe {
     width: 100%;
-    border: 0; 
-    zoom:150%;
-    
+    border: 0;
+    height: 92vh;
 }
 
 .main-infografico{
@@ -154,13 +150,20 @@ iframe {
     justify-content: center;
     padding: 20px;
     box-sizing: border-box;
+    height: 92vh;
 
+}
+.main-dashboard{
+    justify-content: center; 
+    align-items: center; 
+    height: 92vh;
 }
 .dashboard{
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 88vh; 
+    justify-content: center; 
+    align-items: center; 
 }
 
 .infografico{
@@ -168,7 +171,7 @@ iframe {
     flex-direction: row;
     justify-content: center; 
     width: 100%;
-    height: 88vh; 
+    align-items: center; 
 }
 
 

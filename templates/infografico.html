@@ -56,11 +56,11 @@
                     <div class="carousel-item active">
                         <div class="capaInfografico">
                             <div class="infograficoInicioEsquerdo"> 
-                                <h1 class="titulo1Infografico">Infográfico</h1>
-                                <img class="imagem1CapaInfografico" src="../static/images/capa1.svg" alt="Imagem 1">
+                                
+                                <img class="imagemCapaInfografico" src="../static/images/capa.svg" alt="Imagem 1">
                             </div>
                             <div class="infograficoInicioDireito">
-                                <img class="imagem2CapaInfografico" src="../static/images/capa2.svg" alt="Imagem 2">
+                                <h1 class="titulo1Infografico">Infográfico</h1>
                                 <h1 class="titulo2Infografico">Registro de Atividades e Frequência</h1>
                             </div>
                         </div>
@@ -72,32 +72,25 @@
                     </div>
                     <div class="carousel-item">
                         <h1 class="tituloPagina3">Análise de Entrega de Atividades</h1>
-                        <table id="analiseAtividades" class="analiseAtividades">
-                            <thead>
-                              <tr>
-                                <th class="colunaEntregue">
-                                    <img class="iconeColuna" src="../static/images/entregue.svg">
-                                </th>
-                                <th class="colunaEmAndamento">
-                                    <img class="iconeColuna" src="../static/images/emAndamento.svg">
-                                </th>
-                                <th class="colunaNaoEntregue">
-                                    <img class="iconeColuna" src="../static/images/naoEntregue.svg">
-                                </th>
-                              </tr>
-                            </thead>
-                            <thead>
-                                <tr>
-                                  <th class="colunaNomeEntregue">Entregue</th>
-                                  <th class="colunaNomeEmAndamento">Em Andamento</th>
-                                  <th class="colunaNomeNaoEntregue">Não Entregue</th>
-                                </tr>
-                            </thead>
-                            <tbody id="tbodyAtividades">
-                              
-                            </tbody>
-                        </table>
+
+                        <div id="analiseAtividades" class="analiseAtividades">
+                            <div class="colunaEntregue" id="colunaEntregue">
+                                <img class="iconeColuna" src="../static/images/entregue.svg">
+                                <h1 class="colunaNomeEntregue">Entregue</h1>
+                            </div>
+                            <div class="colunaEmAndamento" id="colunaEmAndamento" >
+                                <img class="iconeColuna" src="../static/images/emAndamento.svg">
+                                <h1 class="colunaNomeEmAndamento">Em Andamento</h1>
+                            </div>
+                            <div class="colunaNaoEntregue"  id="colunaNaoEntregue">
+                                <img class="iconeColuna" src="../static/images/naoEntregue.svg">
+                                <h1 class="colunaNomeNaoEntregue">Não Entregue</h1>
+                            </div>
+                        </div>
                     </div>
+
+
+                    
                     <div class="carousel-item">
                         <h1 class="tituloPagina4">Análise de Entregas por Usuário</h1>
                         <div id="AnaliseUsuarios" class="AnaliseUsuarios">
