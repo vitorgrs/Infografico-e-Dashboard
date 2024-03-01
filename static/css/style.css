@@ -207,6 +207,51 @@ main{
     font-weight: 700;
 }
 
+.AnaliseDados{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+    margin: 20px;
+} 
+
+.divDado1, .divDado2, .divDado3, .divDado4, .divDado5, .divDado6{
+    border-radius: 70px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    height: 300px; 
+    justify-content: center;
+} 
+
+.divDado1 img, .divDado2 img, .divDado3 img, .divDado4 img, .divDado5 img, .divDado6 img{
+    width: 100px;
+} 
+
+.divDado1{
+    background-color: rgb(7, 124, 124);
+} 
+.divDado2{
+    background-color: rgb(4, 61, 61);
+} 
+.divDado3{
+    background-color: rgb(44, 161, 60);
+}
+.divDado4{
+    background-color: rgb(207, 188, 14);
+} 
+.divDado5{
+    background-color: rgb(224, 156, 78);
+} 
+.divDado6{
+    background-color: rgb(236, 84, 84);
+} 
+
+
+
 .boxgeral{
     text-align: center;
     background-color: #95b2ca;
