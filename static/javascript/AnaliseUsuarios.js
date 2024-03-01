@@ -57,8 +57,6 @@ function verificarCordoStatus(status) {
     return codhex;
 }
 function criarConteinerEExibirGrafico(perfil, dados) {
-
-    console.log(dados)
     var maiorStatusDeEntrega = verificarMaiorPorcentagem(perfil, dados);
 
     var divUsuarioId = perfil.toLowerCase().replace(/\s+/g, '-');
@@ -88,13 +86,11 @@ function criarConteinerEExibirGrafico(perfil, dados) {
     var descricaoEntrega = document.createElement('p');
     descricaoEntrega.classList.add('descricaoEntrega');
     descricaoEntrega.textContent = "das atividades foram " + maiorStatusDeEntrega.status;
-    console.log(maiorStatusDeEntrega.status)
 
     divUsuario.appendChild(porcentagemEntrega);
     divUsuario.appendChild(descricaoEntrega);
     
     porcentagemRestante =100-maiorStatusDeEntrega.porcentagem;
-
 
     var color= verificarCordoStatus(maiorStatusDeEntrega.status)
     

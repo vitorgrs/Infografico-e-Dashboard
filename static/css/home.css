@@ -1,12 +1,10 @@
 .container {
     display: flex;
     flex-direction: column;
-    width: 100%;
 }
 
 .section {
     min-width: 20rem;
-    max-width: fit-content;
     display: flex;
     flex-direction: row;
     gap: 3rem;
@@ -20,6 +18,7 @@
 .impar {
     background-color: var(--secondary-color);
     color: var(--white);
+    
 }
 
 .par {

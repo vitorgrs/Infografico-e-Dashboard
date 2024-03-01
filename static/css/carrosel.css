@@ -1,8 +1,11 @@
+.infografico {
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    align-items: center; /* Centraliza horizontalmente o conteúdo */
+    height: 86vh; /* Define a altura da seção como 100% da altura da janela de visualização */
+}
 .carousel {
     width: 100%; 
     margin: 0 auto;
-    overflow: hidden;
-    position: relative;
     color: white;
     text-align: center;
     align-items: center;
@@ -15,6 +18,7 @@
   
 .carousel-item {
     display: none;
+    
 }
   
   .carousel-item.active {
@@ -32,29 +36,42 @@
 }
 
 /*Capa*/
+
+.capaInfografico {
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    height: 100%; /* Garante que a altura da capaInfografico seja igual à altura do carousel-item */
+}
+
+.infograficoInicioEsquerdo, .infograficoInicioDireito {
+    flex: 1; /* Faz com que ambas as partes ocupem a mesma quantidade de espaço */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    height: 100%; /* Garante que ambas as partes ocupem toda a altura da capaInfografico */
+}
 .capaInfografico{
     display: flex;
     flex-direction: row;
 }
 .titulo1Infografico{
-    font-size: 5rem;
-    font-weight: 1000;
+    font-size: 3.5rem;
+    font-weight: 900;
     border-bottom: 10px solid white; 
     padding-bottom: 2px;
 
 }
 .titulo2Infografico{
-    font-size: 5rem;
-    font-weight: 1000;
+    font-size: 4rem;
+    font-weight: 900;
     text-decoration: underline;
     text-decoration-skip-ink: none;
 }
 
 .imagem1CapaInfografico{
-    width:60rem;
+    width:100%;
 }
 .imagem2CapaInfografico{
-    width:50rem;
+    width:70%;
 }
 
 .infograficoInicioEsquerdo{

@@ -47,7 +47,7 @@
             </div>
         </header>
         
-        <main id="mainContent">
+        <main class="main-infografico" id="main-infografico">
             <section class="infografico" id="infografico">
                 <button id="prevButton" class="custom-icon-button">
                     <img class="img-icon-button" src="../static/images/icon-prev.svg" alt="Anterior">
@@ -93,24 +93,8 @@
                                   <th class="colunaNomeNaoEntregue">Não Entregue</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                              <tr id='atividadesEntregue'>
-                                <td class="codigoAtividade">
-                                    AM_1_3
-                                </td>
-                                <td></td>
-                                <td></td>
-                              </tr>
-                              <tr id='atividadesEmAndamento'>
-                                <td>AM_1_4 </td>
-                                <td>AM_1_5 </td>
-                                <td></td>
-                              </tr>
-                              <tr id='atividadesNaoEntregue'>
-                                <td>AM_1_9 </td>
-                                <td></td>
-                                <td></td>
-                              </tr>
+                            <tbody id="tbodyAtividades">
+                              
                             </tbody>
                         </table>
                     </div>
@@ -179,6 +163,6 @@
         <script src="../static/javascript/menu.js" ></script>
         <script src="../static/javascript/carrosel.js"></script>
         <script src="../static/javascript/AnaliseUsuarios.js"></script>
-        <script src="../static/javascript/AtividadesEntregues"></script>
+        <script src="../static/javascript/AtividadesEntregues.js"></script>
     </body>
 </html>

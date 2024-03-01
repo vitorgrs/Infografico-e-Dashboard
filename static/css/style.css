@@ -6,7 +6,7 @@
 }
 
 
-main {
+.main-infografico {
     height: 92vh;
 }
 /*HEADER*/
@@ -148,7 +148,7 @@ iframe {
     
 }
 
-main{
+.main-infografico{
     background-color: var(--blue-secundary);
     display: flex;
     justify-content: center;
