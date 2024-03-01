@@ -9,8 +9,6 @@
         <link rel="stylesheet" href="../static/css/carrosel.css">
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gtEjrMzS4L/ro8+CtsIwF4hLvO7Ynpopnd1vqR8r7G0nDEP1CKwoj9bD+XnOi6q6" crossorigin="anonymous">
-
         <title>Sistema Acadêmico</title>
 
     </head>
@@ -56,11 +54,14 @@
                 </button>
                 <div class="carousel">
                     <div class="carousel-item active">
-                        <div class=""> 
-                            <img class="capaInfografico" src="../static/images/capaInfografico.svg" alt="Imagem 1">
-                            <div class="tituloInfografico">
-                                <h1>infografico</h1>
-                                <p>Registro de Atividades e Frequência</p>
+                        <div class="capaInfografico">
+                            <div class="infograficoInicioEsquerdo"> 
+                                <h1 class="titulo1Infografico">Infográfico</h1>
+                                <img class="imagem1CapaInfografico" src="../static/images/capa1.svg" alt="Imagem 1">
+                            </div>
+                            <div class="infograficoInicioDireito">
+                                <img class="imagem2CapaInfografico" src="../static/images/capa2.svg" alt="Imagem 2">
+                                <h1 class="titulo2Infografico">Registro de Atividades e Frequência</h1>
                             </div>
                         </div>
                     </div>
@@ -71,17 +72,17 @@
                     </div>
                     <div class="carousel-item">
                         <h1 class="tituloPagina3">Análise de Entrega de Atividades</h1>
-                        <table class="analiseAtividades">
+                        <table id="analiseAtividades" class="analiseAtividades">
                             <thead>
                               <tr>
                                 <th class="colunaEntregue">
-                                    <img class="iconeColuna" src="../static/images/imagemdoperfil.svg">
+                                    <img class="iconeColuna" src="../static/images/entregue.svg">
                                 </th>
                                 <th class="colunaEmAndamento">
-                                    <img class="iconeColuna" src="../static/images/imagemdoperfil.svg">
+                                    <img class="iconeColuna" src="../static/images/emAndamento.svg">
                                 </th>
                                 <th class="colunaNaoEntregue">
-                                    <img class="iconeColuna" src="../static/images/imagemdoperfil.svg">
+                                    <img class="iconeColuna" src="../static/images/naoEntregue.svg">
                                 </th>
                               </tr>
                             </thead>
@@ -115,36 +116,11 @@
                     </div>
                     <div class="carousel-item">
                         <h1 class="tituloPagina4">Análise de Entregas por Usuário</h1>
-                        <div class="AnaliseUsuarios">
-                            <div class="divUsuario">
-                                <h1 class="Nome Usuario">Usuario 1</h1>
-                                <p>lorem ipsum</p>
-                                <div class="grafico">
-
-                                </div>
-                                <h1>20%</h1>
-                            </div>
-
-                            <div class="divUsuario">
-                                <h1>Usuario 2</h1>
-                                <p>lorem ipsum</p>
-                                <div class="grafico">
-
-                                </div>
-                                <h1>30%</h1>
-                            </div>
-
-                            <div class="divUsuario">
-                                <h1>Usuario 3</h1>
-                                <p>lorem ipsum</p>
-                                <div class="grafico">
-
-                                </div>
-                                <h1>40%</h1>
-                            </div>
+                        <div id="AnaliseUsuarios" class="AnaliseUsuarios">
                         </div>
                     </div>
                     
+
                 </div>
                   
                  
@@ -157,5 +133,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="../static/javascript/menu.js" ></script>
         <script src="../static/javascript/carrosel.js"></script>
+        <script src="../static/javascript/AnaliseUsuarios.js"></script>
+        <script src="../static/javascript/AtividadesEntregues"></script>
     </body>
 </html>
