@@ -207,7 +207,34 @@ main{
     font-weight: 700;
 }
 
+.boxgeral{
+    text-align: center;
+    background-color: #95b2ca;
+    padding: 10px;
+} 
 
+.boxpag2{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-gap: 10px;
+    background-color: #95b2ca;
+    padding: 10px;
+    margin: 20px;
+} 
+
+.cont1, .cont2, .cont3{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px; 
+    justify-content: space-between;
+} 
+
+.cont1  img, .cont2  img, .cont3 img{
+    width: 100px;
+    height: 100px;
+} 
 
 
 @media screen and (max-width: 940px) {
