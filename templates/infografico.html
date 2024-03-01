@@ -30,7 +30,7 @@
                         <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
                     </svg>
                 </button>
-                <a href="index.html">Inicio</a>
+                <a href="../index.html">Inicio</a>
                 <a href="dashboard.html" >Dashboard</a>
                 <a href="">Infográfico</a>
 
@@ -56,17 +56,95 @@
                 </button>
                 <div class="carousel">
                     <div class="carousel-item active">
-                      <img src="../static/images/imagemdoperfil.svg" alt="Imagem 1">
-                      <p>Texto 1</p>
+                        <div class=""> 
+                            <img class="capaInfografico" src="../static/images/capaInfografico.svg" alt="Imagem 1">
+                            <div class="tituloInfografico">
+                                <h1>infografico</h1>
+                                <p>Registro de Atividades e Frequência</p>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="carousel-item">
                       <img src="../static/images/imagemdoperfil.svg" alt="Imagem 2">
                       <p>Texto 2</p>
                     </div>
                     <div class="carousel-item">
-                      <img src="../static/images/imagemdoperfil.svg" alt="Imagem 3">
-                      <p>Texto 3</p>
+                        <h1 class="tituloPagina3">Análise de Entrega de Atividades</h1>
+                        <table class="analiseAtividades">
+                            <thead>
+                              <tr>
+                                <th class="colunaEntregue">
+                                    <img class="iconeColuna" src="../static/images/imagemdoperfil.svg">
+                                </th>
+                                <th class="colunaEmAndamento">
+                                    <img class="iconeColuna" src="../static/images/imagemdoperfil.svg">
+                                </th>
+                                <th class="colunaNaoEntregue">
+                                    <img class="iconeColuna" src="../static/images/imagemdoperfil.svg">
+                                </th>
+                              </tr>
+                            </thead>
+                            <thead>
+                                <tr>
+                                  <th class="colunaNomeEntregue">Entregue</th>
+                                  <th class="colunaNomeEmAndamento">Em Andamento</th>
+                                  <th class="colunaNomeNaoEntregue">Não Entregue</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                              <tr id='atividadesEntregue'>
+                                <td class="codigoAtividade">
+                                    AM_1_3
+                                </td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr id='atividadesEmAndamento'>
+                                <td>AM_1_4 </td>
+                                <td>AM_1_5 </td>
+                                <td></td>
+                              </tr>
+                              <tr id='atividadesNaoEntregue'>
+                                <td>AM_1_9 </td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                            </tbody>
+                        </table>
                     </div>
+                    <div class="carousel-item">
+                        <h1 class="tituloPagina4">Análise de Entregas por Usuário</h1>
+                        <div class="AnaliseUsuarios">
+                            <div class="divUsuario">
+                                <h1 class="Nome Usuario">Usuario 1</h1>
+                                <p>lorem ipsum</p>
+                                <div class="grafico">
+
+                                </div>
+                                <h1>20%</h1>
+                            </div>
+
+                            <div class="divUsuario">
+                                <h1>Usuario 2</h1>
+                                <p>lorem ipsum</p>
+                                <div class="grafico">
+
+                                </div>
+                                <h1>30%</h1>
+                            </div>
+
+                            <div class="divUsuario">
+                                <h1>Usuario 3</h1>
+                                <p>lorem ipsum</p>
+                                <div class="grafico">
+
+                                </div>
+                                <h1>40%</h1>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
                   
                  
