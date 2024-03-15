@@ -3,14 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../static/css/infografico.css">
         <link rel="stylesheet" href="../static/css/index.css">
         <link rel="stylesheet" href="../static/css/style.css">
-        <link rel="stylesheet" href="../static/css/graficos.css">
-        <link rel="stylesheet" href="../static/css/carrosel.css">
+        <link rel="stylesheet" href="../static/css/infografico.css">
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
         <title>Sistema Acadêmico</title>
+
     </head>
     <body>
         <header class="header" id="header">
@@ -49,17 +48,39 @@
         
         <main class="main-infografico" id="main-infografico">
             <section class="infografico" id="infografico">
+                <section class="entregaProduto">
+                        <div id="descricaoConclusaoAtividades" class="descricaoConclusaoAtividades">
+                            <div class="containerGrafico" id="containerGrafico">
+                                <div id="divGrafico" class="divGrafico">
+                                
+                                </div>
 
-                <img src="../static/images/titulo_infografico.svg" alt="titulo">
-                <img src="../static/images/img1_infografico.svg" alt="img1">
+                            </div>
+                            
+                            <div class="descricaoConclusao">
 
+                            </div>
+                            <div class="descricaoConclusaoDetalhada"> 
+                                <div class="detalhesConclusao">
+                                    <img src="../static/images/entregue.svg">
+                                    <p class="textoDescricao">Foram Concluídas</p>
+
+                                </div>
+                                <div class="detalhesConclusao">
+                                    <img src="../static/images/naoEntregue.svg">
+                                    <p class="textoDescricao">Não foram concluídas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                  
             </section>
         </main>
        
-
-        
-
         <script src="../static/javascript/menu.js" ></script>
+        <script src="../static/javascript/ConclusaoAtividades.js" ></script>
         
     </body>
 </html>

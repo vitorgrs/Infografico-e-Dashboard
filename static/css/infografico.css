@@ -1,6 +1,30 @@
-.main-infografico{
-    background-color: #eaeaea;
+body {
+    background-color: var(--white-primary);
 }
-.img-infografico{
-    height: 60%;
+
+
+.descricaoConclusaoAtividades{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:70px;
+}
+.GraficoConclusao{
+    max-width: 30rem;
+    max-height: 30rem;
+}
+.percentualDeConclusao{
+    color: #092FE5;
+    font-size: 20px;
+    font-weight: 700;
+}
+.percentualDeNaoConclusao{
+    color: #00B4FE;
+    font-size: 20px;
+    font-weight: 700;
+}
+.textoDescricao{
+    color: #003585;
+    font-size: 25px;
+    font-weight: 800;
 }
