@@ -1,6 +1,10 @@
 body {
     background-color: var(--white-primary);
 }
+.img-infografico{
+    height: 40%;
+    width: 40%;
+}
 
 /*titulo infografico*/
 
@@ -68,3 +72,4 @@ body {
     font-weight: 800;
 }
 /*situacao das atividades*/
+
