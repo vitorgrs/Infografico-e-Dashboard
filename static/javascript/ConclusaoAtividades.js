@@ -46,7 +46,9 @@ function criarGrafico1(percentualConclusao, percentualNaoConclusao) {
 
 
     
-    var divPercentual = document.getElementById('containerGrafico');
+    var containerGrafico = document.getElementById('containerGrafico');
+    var divPercentual = document.createElement('div');
+    divPercentual.classList.add('divPercentual');
     var percentualDeConclusao = document.createElement('h1');
     percentualDeConclusao.classList.add('percentualDeConclusao');
     percentualDeConclusao.textContent = percentualConclusao + '%';
@@ -60,6 +62,7 @@ function criarGrafico1(percentualConclusao, percentualNaoConclusao) {
 
     divPercentual.appendChild(percentualDeNaoConclusao)
   
+    containerGrafico.appendChild(divPercentual);
 
     var ctx = canvasGrafico.getContext('2d');
     var meuGrafico = new Chart(ctx, {
@@ -68,8 +71,8 @@ function criarGrafico1(percentualConclusao, percentualNaoConclusao) {
             datasets: [{
                 data: [percentualConclusao, percentualNaoConclusao],
                 backgroundColor: [
-                    '#0AC330',
-                    '#E7110F',
+                    '#00B4FE',
+                    '#1A40F2',
                 ],
             }],
         },
