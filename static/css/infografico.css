@@ -1,7 +1,17 @@
 body {
     background-color: var(--white-primary);
 }
-.img-infografico{
+.tituloInfografico{
+    display: flex;
+    gap:100px;
+    align-items: center;
+    text-align: center;    
+}
+.imageminfo{
+    height: 40%;
+    width: 40%;
+}
+.imagemTitulo{
     height: 40%;
     width: 40%;
 }
