@@ -82,6 +82,7 @@ function criarConteinerEExibirGrafico(perfil, dados) {
     var porcentagemEntrega = document.createElement('h1');
     porcentagemEntrega.classList.add('porcentagemEntrega');
     porcentagemEntrega.textContent= maiorStatusDeEntrega.porcentagem+"%"
+    
 
     var descricaoEntrega = document.createElement('p');
     descricaoEntrega.classList.add('descricaoEntrega');

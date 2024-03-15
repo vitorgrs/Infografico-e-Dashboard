@@ -35,41 +35,41 @@ function criarConteinerGrafico6(dataGrafico6) {
 }
 
 function criarTabela(entregueAtividades, entreguesParciais, naoEntreguesAtividades) {
-    // Selecionar o elemento tbody correspondente
-    var tbody = document.getElementById('tbodyAtividades');
+    // Selecionar as divs correspondentes
+    var divEntregue = document.getElementById('colunaEntregue');
+    var divEmAndamento = document.getElementById('colunaEmAndamento');
+    var divNaoEntregue = document.getElementById('colunaNaoEntregue');
 
     // Verificar o tamanho máximo para determinar o número de linhas necessárias
     var maximo = Math.max(entregueAtividades.length, entreguesParciais.length, naoEntreguesAtividades.length);
 
-    // Criar linhas e adicionar as células correspondentes
+    // Adicionar códigos nas divs respectivas
     for (var i = 0; i < maximo; i++) {
-        var linha = document.createElement('tr');
+        // Adicionar código para atividades entregues
+        if (entregueAtividades[i]) {
+            var pEntregue = criarParagrafo(entregueAtividades[i]);
+            divEntregue.appendChild(pEntregue);
+        }
 
-        // Adicionar célula para atividades entregues
-        var celulaEntregue = criarCelula(entregueAtividades[i] || '');
-        celulaEntregue.classList.add('codigoAtividade');
-        linha.appendChild(celulaEntregue);
+        // Adicionar código para atividades em andamento
+        if (entreguesParciais[i]) {
+            var pEmAndamento = criarParagrafo(entreguesParciais[i].codigo);
+            divEmAndamento.appendChild(pEmAndamento);
+        }
 
-        // Adicionar célula para atividades parciais
-        var atividadeParcial = entreguesParciais[i] || {codigo: '', porcentagem: ''};
-        var celulaParcial = criarCelula(atividadeParcial.codigo);
-        celulaParcial.classList.add('codigoAtividade');
-        linha.appendChild(celulaParcial);
-
-        // Adicionar célula para atividades não entregues
-        var celulaNaoEntregue = criarCelula(naoEntreguesAtividades[i] || '');
-        celulaNaoEntregue.classList.add('codigoAtividade');
-        linha.appendChild(celulaNaoEntregue);
-
-        // Adicionar linha ao tbody
-        tbody.appendChild(linha);
+        // Adicionar código para atividades não entregues
+        if (naoEntreguesAtividades[i]) {
+            var pNaoEntregue = criarParagrafo(naoEntreguesAtividades[i]);
+            divNaoEntregue.appendChild(pNaoEntregue);
+        }
     }
 }
 
-function criarCelula(texto) {
-    var celula = document.createElement('td');
-    celula.textContent = texto;
-    return celula;
+// Função para criar parágrafo
+function criarParagrafo(texto) {
+    var p = document.createElement('p');
+    p.textContent = texto;
+    return p;
 }
 
 if (document.getElementById("analiseAtividades")) {
