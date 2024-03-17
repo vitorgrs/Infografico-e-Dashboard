@@ -43,47 +43,63 @@
                 </ul>
             </div>
         </header>
-        
+        <div id="overlay"></div>
+        <div id="big-circle"></div>
         <main class="main-infografico" id="main-infografico">
             <section class="infografico" id="infografico">
-                <section class="entregaProduto">
-                        <div class="tituloInfografico">
-                            <img class="imagemTitulo"src="../static/images/titulo_infografico.svg" alt="titulo">
-                            <img class="imageminfo" src="../static/images/imagemTitulo.svg" alt="img1">
+                <div class="tituloInfografico">
+                    <img class="imagemTitulo"src="../static/images/titulo_infografico.svg" alt="titulo">
+                    <img class="imageminfo" src="../static/images/imagemTitulo.svg" alt="img1">
+                </div>
+                <hr class="linhaAzul">
+                <div class="entregaProduto">
+                    <div id="descricaoConclusaoAtividades" class="descricaoConclusaoAtividades">
+                        <div class="containerGrafico" id="containerGrafico">
+                            <div id="divGrafico" class="divGrafico"></div>
                         </div>
-                        <div id="descricaoConclusaoAtividades" class="descricaoConclusaoAtividades">
-                            <div class="containerGrafico" id="containerGrafico">
-                                <div id="divGrafico" class="divGrafico">
-                                
+                        <div class="descricaoConclusao">
+                            <h1 class="tituloConclusao">Entregas do Produto</h1>
+                            <p class="textoConclusaoProduto" id="textoConclusaoProduto">Das 25 atividades previstas, foram entregues 15 delas.</p>
+                            <div class="descricaoConclusaoDetalhada"> 
+                                <div class="detalhesConclusao">
+                                    <img src="../static/images/entregue.svg">
+                                    <p class="textoDescricao">Foram Concluídas</p>
                                 </div>
-
-                            </div>
-                            
-                            <div class="descricaoConclusao">
-                                <h1 class="tituloConclusao">Entregas do Produto</h1>
-                                <p class="textoConclusaoProduto" id="textoConclusaoProduto">Das 25 atividades previstas, foram entregues 15 delas.</p>
-                                <div class="descricaoConclusaoDetalhada"> 
-                                    <div class="detalhesConclusao">
-                                        <img src="../static/images/entregue.svg">
-                                        <p class="textoDescricao">Foram Concluídas</p>
-
-                                    </div>
-                                    <div class="detalhesConclusao">
-                                        <img src="../static/images/naoEntregue.svg">
-                                        <p class="textoDescricao">Não foram concluídas</p>
-                                    </div>
+                                <div class="detalhesConclusao">
+                                    <img src="../static/images/naoEntregue.svg">
+                                    <p class="textoDescricao">Não foram concluídas</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                </section>
-                  
+                </div>
+                <hr class="linhaAzul">
+                <div class="mapaInterativo"> 
+                    <div class="titulosMapa">
+                        <div> 
+                            <h3 class="tituloMapaMaior" >Quantidade de Alunos</h3>
+                            <h3 class="tituloMapaMenor">Por Região</h3>
+                        </div>
+                        <p class="descricaoMapa">De 3950 alunos registrados mais de 700 participaram do projeto!</p>
+                    </div>
+                
+                    <div id="map-container">
+                        <svg id="map" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <image xlink:href="../static/images/mapaInterativo.svg" width="100%" height="100%"/>
+                        </svg>
+                        <div class="marker" id="marker" style="top: 20%; left: 50%;">
+                            <img src="../static/images/marcador.svg" alt="Marcador">
+                            <p class="marker-text"> <span class="marker-text-maior">+ de 700</span><span class="marker-text-menor"> Participantes</span></p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="linhaAzul">
             </section>
         </main>
-       
+        
         <script src="../static/javascript/menu.js" ></script>
         <script src="../static/javascript/ConclusaoAtividades.js" ></script>
+        <script src="../static/javascript/MapaInterativo.js"></script>
         
     </body>
 </html>

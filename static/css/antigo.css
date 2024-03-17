@@ -1,0 +1,103 @@
+
+/*MAIN*/
+
+
+
+
+.main-infografico{
+    background-color: var(--white-primary);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 92vh;
+
+}
+
+
+.infografico{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    width: 100%;
+    align-items: center; 
+}
+
+
+
+.containerDaEsquerda,
+.containerDoMeio,
+.containerDaDireita {
+    padding: 10px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.Filtro{
+    background-color: var(--blue-primary);
+    min-width: 20rem;
+    min-height: 10%;
+    color: white;
+    border-radius: 40px;
+    text-align: center;
+    padding: 10px;
+}
+
+.textoFiltro{
+    font-size: 2em;
+    font-weight: 700;
+    
+}
+
+.SelectFiltro{
+    margin: 10px;
+    min-width: 90%;
+    border-radius: 20px;
+    min-height: 3rem;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.AnaliseDados{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+    margin: 20px;
+} 
+
+.divDado1, .divDado2, .divDado3, .divDado4, .divDado5, .divDado6{
+    border-radius: 70px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    height: 300px; 
+    justify-content: center;
+} 
+
+.divDado1 img, .divDado2 img, .divDado3 img, .divDado4 img, .divDado5 img, .divDado6 img{
+    width: 100px;
+} 
+
+.divDado1{
+    background-color: rgb(7, 124, 124);
+} 
+.divDado2{
+    background-color: rgb(4, 61, 61);
+} 
+.divDado3{
+    background-color: rgb(44, 161, 60);
+}
+.divDado4{
+    background-color: rgb(207, 188, 14);
+} 
+.divDado5{
+    background-color: rgb(224, 156, 78);
+} 
+.divDado6{
+    background-color: rgb(236, 84, 84);
+} 
