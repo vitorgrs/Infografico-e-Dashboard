@@ -123,9 +123,11 @@ body {
     width: 100%;
     justify-content: center;
     flex-direction:row;
+    gap:10rem;
 }
 .titulosMapa{
     max-width: 25rem;
+    
 }
 .tituloMapaMaior{
     font-family: var(--font-infografico);
@@ -153,11 +155,17 @@ body {
 }
 #map-container {
     position: relative;
-    height: auto;
-    max-width: 700px; 
+    justify-content: center;
+
+}
+.imagemMapa{
+    width: 100%;
+    justify-content: center;
 }
 
 #map {
+    text-align: center;
+    align-items: center;
     width: 30rem;
     height: auto;
 }
