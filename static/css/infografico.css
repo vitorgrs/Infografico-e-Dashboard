@@ -226,4 +226,16 @@ body {
     background-color: rgba(255, 255, 255, 0.8); 
 }
 
+.fade-in {
+    opacity: 0;
+    transition: opacity 2s;
+    animation: fade-in 2s forwards;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
 
