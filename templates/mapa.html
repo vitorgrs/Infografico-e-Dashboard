@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../static/css/index.css">
+        <link rel="stylesheet" href="../static/css/style.css">
+        <link rel="stylesheet" href="../static/css/infografico.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+        <title>Sistema Acadêmico</title>
+        <style>
+            .mapaInterativo{
+                display: flex;
+                flex-direction:row ;
+            }
+
+            .tituloMapa{
+                font-family: var(--font-infografico);
+                font-size: 35px;
+                font-weight: 800;
+                color:  #00284E;
+                white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+        overflow: visible;
+
+            }
+            .tituloMapaMenor{
+                font-family: var(--font-infografico);
+                font-size: 35px;
+                font-weight: 500;
+                color: transparent;
+                -webkit-background-clip: text; 
+                background-clip: text;
+                -webkit-text-fill-color: transparent; 
+                -webkit-text-stroke: 1px #00284E; 
+            }
+            .descricaoMapa{
+                margin-top: 20px;
+                font-family: var(--font-infografico);
+                color:  #00284E;
+            }
+           #map-container {
+                position: relative;
+                width: 100%;
+                height: auto;
+                max-width: 800px; 
+                margin: 0 auto; 
+            }
+
+            #map {
+                width: 100%;
+                height: auto;
+            }
+
+            .marker {
+                position: absolute;
+                transform: translate(-90%, -30%);
+            }
+
+            .marker img {
+                width: 25rem; 
+                height: auto; 
+                display: block;
+            }
+
+            .marker-text {
+                text-align: center;
+                font-family: var(--font-infografico);
+                color: #00284E;
+                position: absolute;
+                top: 50%;
+                left: 45%;
+                transform: translateX(-50%);
+            }
+            .marker-text-maior{
+                font-weight: 700;
+                font-size: 40px;
+            }
+            .marker-text-menor{
+                font-size: 30px;
+                color: transparent;
+                -webkit-background-clip: text; 
+                background-clip: text;
+                -webkit-text-fill-color: transparent; 
+                -webkit-text-stroke: 2px #00284E; 
+            }
+
+            #overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5); 
+                z-index: 100;
+            }
+
+            #big-circle {
+                display: none;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255, 0.8); 
+            }
+
+        </style>
+
+    </head>
+    
+    <body>
+        <div id="overlay"></div>
+        <div id="big-circle"></div>
+
+        <header class="header" id="header">
+            
+            <button onclick="toggleSidebar()" class="btn-icon-header" >
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </button>
+            <div class="logo_header">
+                <h4>Controle de Atividades e Frequência</h4>
+            </div>
+            <div class="buttons_center" id="buttons_center">
+                <button class="btn-icon-header" onclick="closeSidebar()">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </button>
+                <a href="../index.html">Inicio</a>
+                <a href="dashboard.html" >Dashboard</a>
+                <a href="">Infográfico</a>
+
+               
+            </div>
+            
+            <div id="dropdown-content" class="dropdown-content">
+                <ul>
+                    <li class=item id=item1><a href="#">Administrar Escolas</a></li>
+                    <li class=item id=item2><a href="#">Administrar Supervisores</a></li>
+                    <li class=item id=item3><a href="#">Administrar Professores</a></li>
+                    <li class=item id=item4><a href="#">Administrar Alunos</a></li>
+                    <li class=item id=item5><a href="#">Administrar Disciplinas</a></li>
+                    <li class=item id=item6><a href="#">Administrar Turmas</a></li>
+                </ul>
+            </div>
+        </header>
+        
+        <main class="main-infografico" id="main-infografico">
+            <section class="mapaInterativo"> 
+                <div>
+                    <div> 
+                        <h3 class="tituloMapa" >Quantidade de Alunos</h3>
+                        <h3 class="tituloMapaMenor">Por Região</h3>
+                    </div>
+                    <p class="descricaoMapa">De 3950 alunos registrados mais de 700 participaram do projeto!</p>
+                </div>
+            
+                <div id="map-container">
+                    <svg id="map" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <image xlink:href="../static/images/mapaInterativo.svg" width="100%" height="100%"/>
+                    </svg>
+                    <div class="marker" id="marker" style="top: 20%; left: 50%;">
+                        <img src="../static/images/marcador.svg" alt="Marcador">
+                        <p class="marker-text"> <span class="marker-text-maior">+ de 700</span><span class="marker-text-menor"> Participantes</span></p>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+        <script>
+            function moveMarker(event) {
+
+                var marker = document.querySelector('.marker');
+
+                
+            
+                var overlay = document.getElementById('overlay');
+                var bigCircle = document.getElementById('big-circle');
+
+                marker.style.display= 'none';
+                overlay.style.display = 'block';
+                bigCircle.style.display = 'block';
+            }
+
+            document.getElementById('marker').addEventListener('click', moveMarker);
+
+
+        </script>
+        <script src="../static/javascript/menu.js" ></script>
+        <script src="../static/javascript/ConclusaoAtividades.js" ></script>
+    </body>
+</html>

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 :root {
     /*cores */
@@ -19,6 +20,7 @@
     /*famílias das fontes */
     --font-tittle: 'Inter', sans-serif; /* Definindo familia das fontes de título */
     --font-body: 'Inter', sans-serif; /* Definindo familia das fontes do corpo */
+    --font-infografico: 'Righteous', 'Inter';
 
     /*Espessura das fontes */
     --font-tittle-weight: 600;
