@@ -1,7 +1,14 @@
+/*HEADER*/
+.buttonInfografico{
+    background-color: #1D4C91;
+}
+
 body {
     background-color: var(--white-primary);
 }
+/*titulo infografico*/
 .tituloInfografico{
+    
     display: flex;
     gap:100px;
     align-items: center;
@@ -16,7 +23,7 @@ body {
     width: 40%;
 }
 
-/*titulo infografico*/
+
 
 /* conclusão de atividades*/
 .containerGrafico{
@@ -59,10 +66,12 @@ body {
     font-weight: 700;
 }
 .tituloConclusao{
+    font-family: var(--font-infografico);
     color:#003585;
     font-size:50px;
 }
 .textoConclusaoProduto{
+    font-weight: 500;
     color:#003585;
     font-size:30px;
     margin-top: 20px;
