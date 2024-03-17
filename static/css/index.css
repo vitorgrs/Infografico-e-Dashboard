@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
 :root {
     /*cores */
     --primary-color: #0056D2; /* Definindo cor --primary-color com a cor azul */
@@ -8,11 +9,12 @@
     --color-call-attention: #FF793F; /*cor do texto em fundos brancos */
     --color-error: #EC0000; /*cor para chamar atenção do usuário */
     --white: #FFFFFF; /*cor do texto em fundos brancos */
+    --white-primary:#EAEAEA;
     --gray-primary: #717070; /*cor para utilizar em bordas e linhas */
     --gray-secondary: #E5E5E5; /*cor para utilizar em bordas e linhas */
     --green-primary: #005200; /*cor para utilizar em confirmações*/
     --blue-secundary: #01002A;
-    --blue-primary: #1D6599;
+    --blue-primary: #002279;
    
     /*famílias das fontes */
     --font-tittle: 'Inter', sans-serif; /* Definindo familia das fontes de título */

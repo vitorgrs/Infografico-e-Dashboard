@@ -46,41 +46,33 @@ function criarGrafico1(percentualConclusao, percentualNaoConclusao) {
 
 
     
-    var divPercentualConcluido = document.getElementById('descricaoConcluida');
+    var containerGrafico = document.getElementById('containerGrafico');
+    var divPercentual = document.createElement('div');
+    divPercentual.classList.add('divPercentual');
     var percentualDeConclusao = document.createElement('h1');
     percentualDeConclusao.classList.add('percentualDeConclusao');
     percentualDeConclusao.textContent = percentualConclusao + '%';
 
-    
+    divPercentual.appendChild(percentualDeConclusao)
+   
 
-
-    var textoPercentualDeConclusao = document.createElement('p');
-    textoPercentualDeConclusao.classList.add('textoPercentualDeConclusao');
-    textoPercentualDeConclusao.textContent = 'das atividades do produto concluídas';
-    divPercentualConcluido.appendChild(percentualDeConclusao)
-    divPercentualConcluido.appendChild(textoPercentualDeConclusao)
-
-    var divPercentualNaoConcluido = document.getElementById('descricaoNaoConcluida');
     var percentualDeNaoConclusao = document.createElement('h1');
     percentualDeNaoConclusao.classList.add('percentualDeNaoConclusao');
     percentualDeNaoConclusao.textContent = percentualNaoConclusao + '%';
 
-    
-    var textoPercentualDeNaoConclusao = document.createElement('p');
-    textoPercentualDeNaoConclusao.classList.add('textoPercentualDeNaoConclusao');
-    textoPercentualDeNaoConclusao.textContent = 'das atividades do produto não foram concluídas';
-    divPercentualNaoConcluido.appendChild(percentualDeNaoConclusao)
-    divPercentualNaoConcluido.appendChild(textoPercentualDeNaoConclusao)
+    divPercentual.appendChild(percentualDeNaoConclusao)
+  
+    containerGrafico.appendChild(divPercentual);
 
     var ctx = canvasGrafico.getContext('2d');
     var meuGrafico = new Chart(ctx, {
-        type: 'pie',
+        type: 'doughnut',
         data: {
             datasets: [{
                 data: [percentualConclusao, percentualNaoConclusao],
                 backgroundColor: [
-                    '#0AC330',
-                    '#E7110F',
+                    '#00B4FE',
+                    '#1A40F2',
                 ],
             }],
         },
@@ -107,7 +99,7 @@ function criarGrafico1(percentualConclusao, percentualNaoConclusao) {
 
 }
 
-if (document.getElementById("pagina2")) {
+if (document.getElementById("infografico")) {
     carregarDadosCSV();
 }
 

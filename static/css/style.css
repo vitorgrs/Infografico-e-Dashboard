@@ -145,7 +145,7 @@ iframe {
 }
 
 .main-infografico{
-    background-color: var(--blue-secundary);
+    background-color: var(--white-primary);
     display: flex;
     justify-content: center;
     padding: 20px;

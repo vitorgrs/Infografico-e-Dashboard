@@ -1,0 +1,85 @@
+body {
+    background-color: var(--white-primary);
+}
+.tituloInfografico{
+    display: flex;
+    gap:100px;
+    align-items: center;
+    text-align: center;    
+}
+.imageminfo{
+    height: 40%;
+    width: 40%;
+}
+.imagemTitulo{
+    height: 40%;
+    width: 40%;
+}
+
+/*titulo infografico*/
+
+/* conclusão de atividades*/
+.containerGrafico{
+    text-align: center
+}
+.descricaoConclusaoAtividades{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:70px;
+}
+.divGrafico{
+    text-align: center;
+    align-items: center;
+}
+.GraficoConclusao{
+    max-width: 30rem;
+    max-height: 30rem;
+}
+.divPercentual{
+    margin-top:  20px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+.percentualDeConclusao{
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) , rgba(255,255,255, 0.8));
+    width: 8rem;
+    color: #00B4FE;
+    border-radius: 25px;
+    font-size: 3em;
+    font-weight: 700;
+}
+.percentualDeNaoConclusao{
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) , rgba(255,255,255, 0.8));
+    width: 8rem;
+    border-radius: 25px;
+    color: #092FE5;;
+    font-size: 3em;
+    font-weight: 700;
+}
+.tituloConclusao{
+    color:#003585;
+    font-size:50px;
+}
+.textoConclusaoProduto{
+    color:#003585;
+    font-size:30px;
+    margin-top: 20px;
+}
+.descricaoConclusaoDetalhada{
+    margin-top: 20px;
+    display: flex;
+    gap:30px;
+}
+.detalhesConclusao{
+    display: flex;
+    gap:10px;
+}
+.textoDescricao{    
+    color: #003585;
+    font-size: 25px;
+    font-weight: 800;
+}
+/*situacao das atividades*/
+
