@@ -8,9 +8,7 @@
     
 }
 
-.carousel2 p{
-    color: black;
-}
+
   
 .carousel-item2 {
     display: none;
@@ -58,6 +56,7 @@
 #carousel2 {
     display: flex;
     flex-direction: row;
+    text-align: center;
     
 }
 
@@ -101,4 +100,37 @@
 .Grafico2{
     max-width: 20rem;
     max-height: 20rem;
+}
+
+.divDescricaoUsuario{
+    
+}
+.nomeDoPerfil{
+    font-size: 50px;
+    font-family: var(--font-body);
+    font-weight: 800;
+    color: #105180;
+    margin-bottom: 20px;
+
+}
+
+.porcentagemEntrega{
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) , rgba(255,255,255, 0.8));
+    width: 12rem;
+    color: #00B4FE;
+    border-radius: 25px;
+    font-size: 3em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.descricaoEntrega{
+    font-size: 20px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    color: #105180;
 }

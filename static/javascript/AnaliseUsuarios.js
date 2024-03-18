@@ -72,6 +72,7 @@ function criarConteinerEExibirGrafico(perfil, dados) {
     descricaoEntrega.textContent = "das atividades desse perfil são " + maiorStatusDeEntrega.status;
     
     var divDescricaoUsuario = document.createElement('div');
+    divDescricaoUsuario.classList.add('divDescricaoUsuario');
 
     divDescricaoUsuario.appendChild(nomeDoPerfil);
     divDescricaoUsuario.appendChild(porcentagemEntrega);
