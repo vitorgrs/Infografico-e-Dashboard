@@ -14,7 +14,6 @@
   
 .carousel-item2 {
     display: none;
-   
     
 }
   
@@ -54,35 +53,7 @@
     width: 3rem;
 }
 
-.entrega-atividades {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
 
-.retangulo-informacao {
-    border-radius: 2rem;
-    height: 14rem;
-    width: 15rem;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    transition: width 1s, height 1s;
-    animation-name: animacao;
-    animation-duration: 2s;
-    background-color: #003051;
-    align-items: center;
-    
-    
-}
-
-.retangulo-informacao:hover {
-    height: 15rem;
-    width: 16rem;
-    cursor: pointer;
-    background-color: #1F5A92;
-}
 
 #carousel2 {
     display: flex;
@@ -90,24 +61,7 @@
     
 }
 
-.icon-tarefa {
-    height: 50px;
-    width: 50px;
-}
 
-/* #ret1{
-    background-color: #003051;
-    
-
-}
-
-#ret2{
-    background-color: #1F5A92;
-}
-
-#ret3 {
-    background-color:#6E89AB ;
-} */
 
 .retangulo-informacao h3, p{
     color:white;
@@ -141,3 +95,10 @@
     text-align: end;
 }
 
+
+
+
+.Grafico2{
+    max-width: 20rem;
+    max-height: 20rem;
+}
