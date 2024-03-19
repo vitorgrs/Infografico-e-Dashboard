@@ -50,11 +50,6 @@
         <div id="big-circle">
             <p class="textCircule">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum.</p>
         </div>
-        <div id="div-Conclusao">
-            
-        </div>
-        
-        </div>
         <main class="main-infografico" id="main-infografico">
             <section class="infografico" id="infografico">
                 <div class="tituloInfografico">
@@ -62,34 +57,52 @@
                     <img class="imageminfo" src="../static/images/imagemTitulo.svg" alt="img1">
                 </div>
                 <hr class="linhaAzul">
-                <div class="entregaProduto">
-                    <div id="descricaoConclusaoAtividades" class="descricaoConclusaoAtividades">
-                        <div class="containerGrafico" id="containerGrafico">
-                            <div id="divGrafico" class="divGrafico"></div>
-                        </div>
-                        <div class="descricaoConclusao">
-                            <h1 class="tituloConclusao">Entregas do Produto</h1>
-                            <p class="textoConclusaoProduto" id="textoConclusaoProduto">Das 25 atividades previstas, foram entregues 15 delas.</p>
-                            <div class="descricaoConclusaoDetalhada"> 
-                                <div class="detalhesConclusao">
-                                    <img src="../static/images/entregue.svg">
-                                    <p class="textoDescricao">Foram Concluídas</p>
-                                </div>
-                                <div class="detalhesConclusao">
-                                    <img src="../static/images/naoEntregue.svg">
-                                    <p class="textoDescricao">Não foram concluídas</p>
-                                </div>
-                                <p id="myP"></p>
+                
+                <section id="descricaoConclusaoAtividades" class="descricaoConclusaoAtividades">
+                    <div class="containerGrafico" id="containerGrafico">
+                        <div id="divGrafico" class="divGrafico"></div>
+                    </div>
+                    <div class="descricaoConclusao">
+                        <h1 class="tituloConclusao">Entregas do Produto</h1>
+                        <p class="textoConclusaoProduto" id="textoConclusaoProduto">Das 25 atividades previstas, foram entregues 15 delas.</p>
+                        <div class="descricaoConclusaoDetalhada"> 
+                            <div class="detalhesConclusao">
+                                <img src="../static/images/entregue.svg">
+                                <p class="textoDescricao">Foram Concluídas</p>
                             </div>
+                            <div class="detalhesConclusao">
+                                <img src="../static/images/naoEntregue.svg">
+                                <p class="textoDescricao">Não foram concluídas</p>
+                            </div>
+                            <p id="myP"></p>
                         </div>
                     </div>
-                </div>
+                </section>
+                
                 <hr class="linhaAzul">
-                <div class="mapaInterativo"> 
+                <section id="entrega-atividades-ex">
+                    <div id="entrega-atv-superior">
+                        <h1 class="tituloMaior">Entrega de<br> Atividades</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing.</p>
+                    </div>
+                    <div class="entrega-atividades" id="section-entrega-atividades">
+                        <button id="prevButton" class="custom-icon-button">
+                            <img class="img-icon-button" src="../static/images/icon-prev.svg" alt="Anterior">
+                        </button>
+                        <div class="carousel" id="carousel">
+                        </div>
+                        <button id="nextButton" class="custom-icon-button">
+                            
+                            <img class="img-icon-button" src="../static/images/icon-next.svg" alt="Próximo">
+                        </button>
+                    </div>
+                </section>
+                <hr class="linhaAzul">
+                <section class="mapaInterativo"> 
                     <div class="titulosMapa">
                         <div> 
-                            <h3 class="tituloMapaMaior" >Quantidade de Alunos</h3>
-                            <h3 class="tituloMapaMenor">Por Região</h3>
+                            <h3 class="tituloMaior" >Quantidade de Alunos</h3>
+                            <h3 class="tituloMenor">Por Região</h3>
                         </div>
                         <p class="descricaoMapa">De 3950 alunos registrados mais de 700 participaram do projeto!</p>
                     </div>
@@ -105,111 +118,17 @@
                             <img class="marcadorInterativo"src="../static/images/trianguloMarcador.svg" alt="Marcador">
                         </div>
                     </div>
-                </div>
-                <hr class="linhaAzul">
-                <section id="entrega-atividades-ex">
-                    <div id="entrega-atv-superior">
-                        <h1 class="tituloMapaMaior">Entrega de<br> Atividades</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing.</p>
-                    </div>
-                    <div class="entrega-atividades" id="section-entrega-atividades">
-                        <button id="prevButton" class="custom-icon-button">
-                            <img class="img-icon-button" src="../static/images/icon-prev.svg" alt="Anterior">
-                        </button>
-                        
-                        <div class="carousel" id="carousel1">
-                            <div class="carousel-item active">
-                                <div class="retangulo-informacao" id="ret1">
-                                    <img class="icon-tarefa" src="../static/images/icon-tarefa.svg" alt="Anterior">
-                                    <h3>AM_1_1</h3>
-                                    <p>entregou 135 dias antes do prazo</p>
-                                </div>
-                                <div class="retangulo-informacao" id="ret2">
-                                    <img class="icon-tarefa" src="../static/images/icon-tarefa.svg" alt="Anterior">
-                                    <h3>AM_1_2</h3>
-                                    <p>entregou 135 dias antes do prazo</p>
-                                </div>
-                                <div class="retangulo-informacao" id="ret3">
-                                    <img class="icon-tarefa" src="../static/images/icon-tarefa.svg" alt="Anterior">
-                                    <h3>AM_1_3</h3>
-                                    <p>entregou 135 dias antes do prazo</p>
-                                </div>
-                                
-                            </div>
-                            
-                            <div class="carousel-item">
-                                <div class="retangulo-informacao" id="ret1">
-                                    <img class="icon-tarefa" src="../static/images/icon-tarefa.svg" alt="Anterior">
-                                    <h3>AM_1_4</h3>
-                                    <p>entregou 135 dias antes do prazo</p>
-                                </div>
-                                <div class="retangulo-informacao" id="ret2">
-                                    <img class="icon-tarefa" src="../static/images/icon-tarefa.svg" alt="Anterior">
-                                    <h3>AM_1_5</h3>
-                                    <p>entregou 135 dias antes do prazo</p>
-                                </div>
-                                <div class="retangulo-informacao" id="ret3">
-                                    <img class="icon-tarefa" src="../static/images/icon-tarefa.svg" alt="Anterior">
-                                    <h3>AM_1_6</h3>
-                                    <p>entregou 135 dias antes do prazo</p>
-                                </div>
-                            </div>
-                            
-                            <div class="carousel-item">
-                                <div class="retangulo-informacao" id="ret1">
-                                    <img class="icon-tarefa" src="../static/images/icon-tarefa.svg" alt="Anterior">
-                                    <h3>AM_1_7</h3>
-                                    <p>entregou 135 dias antes do prazo</p>
-                                </div>
-                                <div class="retangulo-informacao" id="ret2">
-                                    <img class="icon-tarefa" src="../static/images/icon-tarefa.svg" alt="Anterior">
-                                    <h3>AM_1_8</h3>
-                                    <p>entregou 135 dias antes do prazo</p>
-                                </div>
-                                <div class="retangulo-informacao" id="ret3">
-                                    <img class="icon-tarefa" src="../static/images/icon-tarefa.svg" alt="Anterior">
-                                    <h3>AM_1_9</h3>
-                                    <p>entregou 135 dias antes do prazo</p>
-                                </div>
-                            </div>
-        
-                            <div class="carousel-item" id="pagina2">
-                                <div class="retangulo-informacao" id="ret1">
-                                    <img class="icon-tarefa" src="../static/images/icon-tarefa.svg" alt="Anterior">
-                                    <h3>AM_1_10</h3>
-                                    <p>entregou 135 dias antes do prazo</p>
-                                </div>
-                                <div class="retangulo-informacao" id="ret2">
-                                    <img class="icon-tarefa" src="../static/images/icon-tarefa.svg" alt="Anterior">
-                                    <h3>AM_1_11</h3>
-                                    <p>entregou 135 dias antes do prazo</p>
-                                </div>
-                                <div class="retangulo-informacao" id="ret3">
-                                    <img class="icon-tarefa" src="../static/images/icon-tarefa.svg" alt="Anterior">
-                                    <h3>AM_1_12</h3>
-                                    <p>entregou 135 dias antes do prazo</p>
-                                </div>
-                            </div>
-        
-                            
-                            
-        
-                        </div>
-                        <button id="nextButton" class="custom-icon-button">
-                            
-                            <img class="img-icon-button" src="../static/images/icon-next.svg" alt="Próximo">
-                        </button>
-                    </div>
                 </section>
+                
                 <hr class="linhaAzul"></hr>
                 <section id="entrega-atividades-ex2">
                     <div id="entrega-atv-superior2">
                         
-                        <img class="img-icon-perfis" src="../static/images/icon-perfis.png" alt="Próximo">
+                        <img class="icon-Entrega" src="../static/images/icon-perfis.png" alt="Próximo">
                         
                         <div id="title-right">
-                            <h1 class="tituloMapaMaior">Situação das Entregas<br>
-                            <h3 class="tituloMapaMenor">Por Perfil</h3>
+                            <h1 class="tituloMaior">Situação das Entregas<br>
+                            <h3 class="tituloMenor">Por Perfil</h3>
                         </div>
                         
                     </div>
@@ -230,10 +149,8 @@
         <script src="../static/javascript/menu.js" ></script>
         <script src="../static/javascript/ConclusaoAtividades.js" ></script>
         <script src="../static/javascript/MapaInterativo.js"></script>
-        <script src="../static/javascript/carrosel.js"></script>
-        
+        <script src="../static/javascript/AtividadesEntregues.js"></script>
         <script src="../static/javascript/AnaliseUsuarios.js"></script>
-        <script src="../static/javascript/ConclusaoInterativa.js"></script>
-        
+       
     </body>
 </html>
