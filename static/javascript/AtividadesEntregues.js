@@ -1,77 +1,73 @@
+
 function carregarDadosCSV() {
-    fetch('../data/dados_csv/tabela4.csv')
+    fetch('../data/dados_csv/tabela5.csv')
         .then(response => response.text())
-        .then(data => criarConteinerGrafico6(data));
+        .then(data => codigoComSituacao(data));
 }
 
 
 
+function codigoComSituacao(csvData) {
+    const linhas = csvData.trim().split('\n');
+    const codigosComObservacoes = {};
 
-function criarConteinerGrafico6(dataGrafico6) {
-    var dadosGrafico6 = dataGrafico6.replace(/(\d+),(\d+%)/g, '$1.$2');
 
-    const linhas = dadosGrafico6.split('\n').map(linha => linha.trim());
-  
-    const cabecalho = linhas.shift().split(',');
-    
-    let entregueAtividades = [];
-    let EntreguesParciais = [];
-    let naoEntreguesAtividades = [];
+    for (let i = 1; i < linhas.length; i++) {
+        const colunas = linhas[i].split(',');
+        const codigo = colunas[0]; 
+        const observacao = colunas[colunas.length - 1].replace(/"/g, ''); 
 
-    linhas.forEach(linha => {
-        const colunas = linha.split(',');
-        const codigo = colunas[0];
-
-        if (colunas[1] === 'X') {
-            entregueAtividades.push(codigo);
-        } else if (colunas[2] && colunas[2].trim() !== '') {
-            EntreguesParciais.push({ codigo: codigo, porcentagem: colunas[2].trim() });
+        
+        if (codigo in codigosComObservacoes) {
+            
+            codigosComObservacoes[codigo] += `\n${observacao}`;
         } else {
-            naoEntreguesAtividades.push(codigo);
-        }
-    });
-
-    criarTabela(entregueAtividades,EntreguesParciais,naoEntreguesAtividades)
-}
-
-function criarTabela(entregueAtividades, entreguesParciais, naoEntreguesAtividades) {
-    // Selecionar as divs correspondentes
-    var divEntregue = document.getElementById('colunaEntregue');
-    var divEmAndamento = document.getElementById('colunaEmAndamento');
-    var divNaoEntregue = document.getElementById('colunaNaoEntregue');
-
-    // Verificar o tamanho máximo para determinar o número de linhas necessárias
-    var maximo = Math.max(entregueAtividades.length, entreguesParciais.length, naoEntreguesAtividades.length);
-
-    // Adicionar códigos nas divs respectivas
-    for (var i = 0; i < maximo; i++) {
-        // Adicionar código para atividades entregues
-        if (entregueAtividades[i]) {
-            var pEntregue = criarParagrafo(entregueAtividades[i]);
-            divEntregue.appendChild(pEntregue);
-        }
-
-        // Adicionar código para atividades em andamento
-        if (entreguesParciais[i]) {
-            var pEmAndamento = criarParagrafo(entreguesParciais[i].codigo);
-            divEmAndamento.appendChild(pEmAndamento);
-        }
-
-        // Adicionar código para atividades não entregues
-        if (naoEntreguesAtividades[i]) {
-            var pNaoEntregue = criarParagrafo(naoEntreguesAtividades[i]);
-            divNaoEntregue.appendChild(pNaoEntregue);
+           
+            codigosComObservacoes[codigo] = observacao;
         }
     }
+    console.log(codigosComObservacoes)
+    criarCarousel(codigosComObservacoes);
 }
 
-// Função para criar parágrafo
-function criarParagrafo(texto) {
-    var p = document.createElement('p');
-    p.textContent = texto;
-    return p;
+function criarCarousel(data) {
+    const codigosComObservacoes = data; 
+
+    const carouselDiv = document.getElementById('carousel'); 
+
+    let carouselItemsHTML = ''; 
+
+    const codigosArray = Object.entries(codigosComObservacoes);
+
+    for (let i = 0; i < codigosArray.length; i += 3) {
+        const grupoCodigos = codigosArray.slice(i, i + 3); 
+
+        const divsRetangulo = grupoCodigos.map(([codigo, observacao], index) => {
+            return `
+                <div class="retangulo-informacao" id="ret${i + index + 1}">
+                    <img class="icon-tarefa" src="../static/images/icon-tarefa.svg" alt="Anterior">
+                    <h3>${codigo}</h3>
+                    <p>${observacao}</p>
+                </div>
+            `;
+        });
+
+        const divCarouselItem = `
+            <div class="carousel-item ${i === 0 ? 'active' : ''}">
+                ${divsRetangulo.join('')}
+            </div>
+        `;
+        carouselItemsHTML += divCarouselItem;
+    }
+
+   
+    carouselDiv.innerHTML = carouselItemsHTML;
 }
 
-if (document.getElementById("analiseAtividades")) {
+
+if (document.getElementById("carousel")) {
     carregarDadosCSV();
+    const scriptCarrosel = document.createElement('script');
+    scriptCarrosel.src = '../static/javascript/carrosel.js'; 
+    document.body.appendChild(scriptCarrosel);
 }
