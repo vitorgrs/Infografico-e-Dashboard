@@ -357,8 +357,8 @@ body {
 #big-circle {
     display: none;
     position: absolute;
-    top: 142%;
-    left:55%;
+    top: 212%;
+    left:60%;
     transform: translate(-50%, -40%);
     width: 400px;
     height: 400px;

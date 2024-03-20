@@ -1,0 +1,23 @@
+.buttonDashboard{
+    background-color: #1D4C91;
+}
+
+
+iframe {
+    width: 100%;
+    border: 0;
+    height: 92vh;
+}
+
+.main-dashboard{
+    justify-content: center; 
+    align-items: center; 
+    height: 92vh;
+}
+.dashboard{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center; 
+    align-items: center; 
+}
