@@ -18,7 +18,7 @@ $values = $response->getValues();
 if (empty($values)) {
     print "No data found.\n";
 } else {
-    $csv_filename = "tabela1.csv";
+    $csv_filename = "../data/dados_csv/tabela1.csv";
     $csv_file = fopen($csv_filename, "w");
     foreach ($values as $row) {
         fputcsv($csv_file, $row);
