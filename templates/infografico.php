@@ -1,3 +1,9 @@
+<?php 
+//php ../conversor/conversor.php
+$comando = 'php ../conversor/conversor.php';
+$saida = passthru($comando, $result);
+printf( "Saída do comando:\n$result");
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
