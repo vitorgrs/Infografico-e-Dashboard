@@ -24,6 +24,6 @@ if (empty($values)) {
         fputcsv($csv_file, $row);
     }
     fclose($csv_file);
-    echo "CSV $csv_filename exportado com sucesso!";
+    //echo "CSV $csv_filename exportado com sucesso!";
 }
 ?>
