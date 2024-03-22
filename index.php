@@ -30,7 +30,7 @@
                 </button>
                 <a class="buttonInicio" href="">Inicio</a>
                 <a class="buttonDashboard" href="templates/dashboard.html" >Dashboard</a>
-                <a class="buttonInfografico" href="templates/infografico.html">Infográfico</a>
+                <a class="buttonInfografico" href="templates/infografico.php">Infográfico</a>
             </div>
             <div id="dropdown-content" class="dropdown-content">
                 <ul>
@@ -69,7 +69,7 @@
                 <div class="left" id="part3">
                     <h2>Infográfico</h2>
                     <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, nobis saepe? A facere possimus placeat tenetur minima impedit dignissimos tempore amet, sapiente dicta voluptatum quibusdam repellendus illo accusamus nostrum aspernatur?</h5>
-                    <a class="button-home" href="templates/infografico.html">Ver mais</a>
+                    <a class="button-home" href="templates/infografico.php">Ver mais</a>
                 </div>
                 <div class="right iconsImpar">
                     <img class="icon" src="static/images/home/infografico.png" alt="">
