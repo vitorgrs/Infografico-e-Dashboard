@@ -136,6 +136,7 @@ body {
   
 .carousel-item {
     display: none;
+    gap: 20px;
    
     
 }
@@ -253,18 +254,19 @@ body {
 
 
 /*Mapa interativo*/
+
 .mapaInterativo{
+
     display: flex;
     flex-direction:row;
-    justify-content: space-around;
-    text-align: center;
-    align-items: center;
+    justify-content: center;
     width: 100%;
     gap:10rem;
     padding-left: 10%;
     padding-right: 10%;
     margin: 20px;
 }
+
 .titulosMapa{
     max-width: 25rem;
     
@@ -357,8 +359,8 @@ body {
 #big-circle {
     display: none;
     position: absolute;
-    top: 212%;
-    left:60%;
+    top: 60%;
+    left:0%;
     transform: translate(-50%, -40%);
     width: 400px;
     height: 400px;

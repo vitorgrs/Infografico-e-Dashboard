@@ -26,7 +26,7 @@ function codigoComSituacao(csvData) {
             codigosComObservacoes[codigo] = observacao;
         }
     }
-    console.log(codigosComObservacoes)
+  
     criarCarousel(codigosComObservacoes);
 }
 
