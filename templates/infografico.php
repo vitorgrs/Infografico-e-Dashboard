@@ -11,8 +11,7 @@ passthru($comando, $result);
         <link rel="stylesheet" href="../static/css/index.css">
         <link rel="stylesheet" href="../static/css/style.css">
         <link rel="stylesheet" href="../static/css/infografico.css">
-        <link rel="stylesheet" href="../static/css/carrossel2.css">
-        <link rel="stylesheet" href="../static/css/carrossel3.css">
+       
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
         <title>Sistema Acadêmico</title>
@@ -52,9 +51,7 @@ passthru($comando, $result);
         </header>
         <div id="overlay">
         </div>
-        <div id="big-circle">
-            <p class="textCircule">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum.</p>
-        </div>
+        
         <main class="main-infografico" id="main-infografico">
             <section class="infografico" id="infografico">
                 <div class="tituloInfografico">
@@ -122,7 +119,11 @@ passthru($comando, $result);
                         <div class="marker" id="markerInterativo" style="top: 20%; left: 50%;">
                             <img class="marcadorInterativo"src="../static/images/trianguloMarcador.svg" alt="Marcador">
                         </div>
+                        <div id="big-circle">
+                            <p class="textCircule">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum.</p>
+                        </div>
                     </div>
+                    
                 </section>
                 
                 <hr class="linhaAzul"></hr>
@@ -156,6 +157,5 @@ passthru($comando, $result);
         <script src="../static/javascript/MapaInterativo.js"></script>
         <script src="../static/javascript/AtividadesEntregues.js"></script>
         <script src="../static/javascript/AnaliseUsuarios.js"></script>
-       
     </body>
 </html>
