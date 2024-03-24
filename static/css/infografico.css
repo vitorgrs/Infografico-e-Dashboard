@@ -256,10 +256,9 @@ body {
 /*Mapa interativo*/
 
 .mapaInterativo{
-
     display: flex;
     flex-direction:row;
-    justify-content: center;
+    justify-content: space-around;
     width: 100%;
     gap:10rem;
     padding-left: 10%;

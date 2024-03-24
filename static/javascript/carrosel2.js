@@ -29,6 +29,6 @@ function carrosel2() {
   document.getElementById('nextButton2').addEventListener('click', goToNextItem);
 };
 
-if (document.getElementById("carousel2")) {
-  carrosel2();
-}
+
+carrosel2();
+

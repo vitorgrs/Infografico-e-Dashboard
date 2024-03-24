@@ -133,11 +133,33 @@ function carregarDadosCSV(caminho, callback) {
             callback(dados);
         })
         .catch(error => console.error('Erro ao carregar dados do CSV:', error));
-}
-if (document.getElementById("carousel2")) {
-    carregarDadosEExibirGraficos();
-    const scriptCarrosel = document.createElement('script');
-    scriptCarrosel.src = '../static/javascript/carrosel2.js'; 
-    document.body.appendChild(scriptCarrosel);
+        const UsuariosProntos = new Event('UsuariosProntos');
+        document.dispatchEvent(UsuariosProntos);
+
 }
 
+
+
+
+
+
+
+if (document.getElementById("carousel2")) {
+document.addEventListener('UsuariosProntos', () => {
+    const scriptCarrosel = document.createElement('script');
+    scriptCarrosel.src = '../static/javascript/carrosel2.js'; 
+
+    
+    scriptCarrosel.onload = function() {
+    
+       
+        carrosel2();
+    };
+
+  
+    document.body.appendChild(scriptCarrosel);
+});
+
+
+carregarDadosEExibirGraficos();
+}
