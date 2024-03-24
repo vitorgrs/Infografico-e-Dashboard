@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../static/css/index.css">
+        <link rel="stylesheet" href="../static/css/style.css">
+        <link rel="stylesheet" href="../static/css/infografico.css">
+       
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+        <title>Sistema Acadêmico</title>
+
+    </head>
+    <body>
+        <header class="header" id="header">
+            <button onclick="toggleSidebar()" class="btn-icon-header" >
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </button>
+            <div class="logo_header">
+                <h4>Controle de Atividades e Frequência</h4>
+            </div>
+            <div class="buttons_center" id="buttons_center">
+                <button class="btn-icon-header" onclick="closeSidebar()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </button>
+                <a class="buttonInicio" href="../index.html">Inicio</a>
+                <a class="buttonDashboard" href="dashboard.html" >Dashboard</a>
+                <a class="buttonInfografico" href="">Infográfico</a>
+            </div>
+            
+            <div id="dropdown-content" class="dropdown-content">
+                <ul>
+                    <li class=item id=item1><a href="#">Administrar Escolas</a></li>
+                    <li class=item id=item2><a href="#">Administrar Supervisores</a></li>
+                    <li class=item id=item3><a href="#">Administrar Professores</a></li>
+                    <li class=item id=item4><a href="#">Administrar Alunos</a></li>
+                    <li class=item id=item5><a href="#">Administrar Disciplinas</a></li>
+                    <li class=item id=item6><a href="#">Administrar Turmas</a></li>
+                </ul>
+            </div>
+        </header>
+        <div id="overlay">
+        </div>
+        
+        <main class="main-infografico" id="main-infografico">
+            <section class="infografico" id="infografico">
+                <div class="tituloInfografico">
+                    <img class="imagemTitulo"src="../static/images/titulo_infografico.svg" alt="titulo">
+                    <img class="imageminfo" src="../static/images/imagemTitulo.svg" alt="img1">
+                </div>
+                <hr class="linhaAzul">
+                
+                <section id="descricaoConclusaoAtividades" class="descricaoConclusaoAtividades">
+                    <div class="containerGrafico" id="containerGrafico">
+                        <div id="divGrafico" class="divGrafico"></div>
+                    </div>
+                    <div class="descricaoConclusao">
+                        <h1 class="tituloConclusao">Entregas do Produto</h1>
+                        <p class="textoConclusaoProduto" id="textoConclusaoProduto">Das 25 atividades previstas, foram entregues 15 delas.</p>
+                        <div class="descricaoConclusaoDetalhada"> 
+                            <div class="detalhesConclusao">
+                                <img src="../static/images/entregue.svg">
+                                <p class="textoDescricao">Foram Concluídas</p>
+                            </div>
+                            <div class="detalhesConclusao">
+                                <img src="../static/images/naoEntregue.svg">
+                                <p class="textoDescricao">Não foram concluídas</p>
+                            </div>
+                            <p id="myP"></p>
+                        </div>
+                    </div>
+                </section>
+                
+                <hr class="linhaAzul">
+                <section id="entrega-atividades-ex">
+                    <div id="entrega-atv-superior">
+                        <h1 class="tituloMaior">Entrega de<br> Atividades</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing.</p>
+                    </div>
+                    <div class="entrega-atividades" id="section-entrega-atividades">
+                        <button id="prevButton" class="custom-icon-button">
+                            <img class="img-icon-button" src="../static/images/icon-prev.svg" alt="Anterior">
+                        </button>
+                        <div class="carousel" id="carousel">
+                        </div>
+                        <button id="nextButton" class="custom-icon-button">
+                            
+                            <img class="img-icon-button" src="../static/images/icon-next.svg" alt="Próximo">
+                        </button>
+                    </div>
+                </section>
+                <hr class="linhaAzul">
+                <section class="mapaInterativo"> 
+                    <div class="titulosMapa">
+                        <div> 
+                            <h3 class="tituloMaior" >Quantidade de Alunos</h3>
+                            <h3 class="tituloMenor">Por Região</h3>
+                        </div>
+                        <p class="descricaoMapa">De 3950 alunos registrados mais de 700 participaram do projeto!</p>
+                    </div>
+                
+                    <div id="map-container">
+                        <img class="imagemMapa" src="../static/images/mapaInterativo.svg"/>
+
+                        <div class="marker" id="marker" style="top: 20%; left: 50%;">
+                            <img src="../static/images/marcador.svg" alt="Marcador">
+                            <p class="marker-text"> <span class="marker-text-maior">+ de 700</span><span class="marker-text-menor"> Participantes</span></p>
+                        </div>
+                        <div class="marker" id="markerInterativo" style="top: 20%; left: 50%;">
+                            <img class="marcadorInterativo"src="../static/images/trianguloMarcador.svg" alt="Marcador">
+                        </div>
+                        <div id="big-circle">
+                            <p class="textCircule">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum.</p>
+                        </div>
+                    </div>
+                    
+                </section>
+                
+                <hr class="linhaAzul"></hr>
+                <section id="entrega-atividades-ex2">
+                    <div id="entrega-atv-superior2">
+                        
+                        <img class="icon-Entrega" src="../static/images/icon-perfis.png" alt="Próximo">
+                        
+                        <div id="title-right">
+                            <h1 class="tituloMaior">Situação das Entregas<br>
+                            <h3 class="tituloMenor">Por Perfil</h3>
+                        </div>
+                        
+                    </div>
+                    <div class="entrega-atividades" id="section-entrega-atividades">
+                        <button id="prevButton2" class="custom-icon-button">
+                            <img class="img-icon-button" src="../static/images/icon-prev.svg" alt="Anterior">
+                        </button>
+                        <div class="carousel2" id="carousel2">
+                        </div>
+                        <button id="nextButton2" class="custom-icon-button">
+                            <img class="img-icon-button" src="../static/images/icon-next.svg" alt="Próximo">
+                        </button>
+                    </div>
+                </section>    
+            </section>
+        </main>
+        
+        <script src="../static/javascript/menu.js" ></script>
+        <script src="../static/javascript/ConclusaoAtividades.js" ></script>
+        <script src="../static/javascript/MapaInterativo.js"></script>
+        <script src="../static/javascript/AtividadesEntregues.js"></script>
+        <script src="../static/javascript/AnaliseUsuarios.js"></script>
+    </body>
+</html>
