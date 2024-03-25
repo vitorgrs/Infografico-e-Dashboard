@@ -37,17 +37,7 @@ passthru($comando, $result);
                 <a class="buttonDashboard" href="dashboard.html" >Dashboard</a>
                 <a class="buttonInfografico" href="">Infográfico</a>
             </div>
-            
-            <div id="dropdown-content" class="dropdown-content">
-                <ul>
-                    <li class=item id=item1><a href="#">Administrar Escolas</a></li>
-                    <li class=item id=item2><a href="#">Administrar Supervisores</a></li>
-                    <li class=item id=item3><a href="#">Administrar Professores</a></li>
-                    <li class=item id=item4><a href="#">Administrar Alunos</a></li>
-                    <li class=item id=item5><a href="#">Administrar Disciplinas</a></li>
-                    <li class=item id=item6><a href="#">Administrar Turmas</a></li>
-                </ul>
-            </div>
+            -
         </header>
         <div id="overlay">
         </div>
